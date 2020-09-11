@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_ui_white"
+    android:padding="5dp"
+    android:layout_gravity="center">
+
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:layout_width="180dp"
+        android:layout_height="170dp"
+        android:src="@drawable/error_icon"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submission not Successful"
+        android:textStyle="bold"
+        android:textSize="21dp"
+        android:textColor="@color/dark_gray"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>
