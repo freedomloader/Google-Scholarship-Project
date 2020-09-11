@@ -26,18 +26,27 @@ class ListViewAdapter(private val mContext: Context?, mData: ArrayList<DataModel
         holder.image.animation = AnimationUtils.loadAnimation(mContext, R.anim.fade_transition_animation)
         holder.container.animation = AnimationUtils.loadAnimation(mContext, R.anim.fade_scale_animation)
         val data = mData!![position]
+
+        holder.tv_title.text = data.name
+
         if (modelType == "skill") {
             holder.tv_content.text = data.hours + " skill IQ Score, " + data.country
+            if (data.badgeUrl != null) {
+                Glide.with(mContext!!)
+                        .load(data.badgeUrl)
+                        .fitCenter()
+                        .into(holder.image)
+            }
         } else {
             holder.tv_content.text = data.hours + " learning hours, " + data.country
+            if (data.badgeUrl != null) {
+                Glide.with(mContext!!)
+                        .load(data.badgeUrl)
+                        .transform(CenterCrop(), RoundedCorners(30))
+                        .into(holder.image)
+            }
         }
-        holder.tv_title.text = data.name
-        if (data.badgeUrl != null) {
-            Glide.with(mContext!!)
-                    .load(data.badgeUrl)
-                    .transform(CenterCrop(), RoundedCorners(30))
-                    .into(holder.image)
-        }
+
     }
 
     override fun getItemCount(): Int {

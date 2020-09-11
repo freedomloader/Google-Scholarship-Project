@@ -9,9 +9,17 @@
         android:id="@+id/bgHeader"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:background="@drawable/header_register"
         android:theme="@style/ToolbarTheme"
         android:elevation="5dp" />
+
+    <ImageButton
+        android:id="@+id/toolbar_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:elevation="10dp"
+        android:src="@drawable/ic_arrow_back_black_24dp"
+        style="@style/Widget.AppCompat.Button.Borderless" />
 
     <TextView
         android:id="@+id/tvSignUp"
@@ -21,7 +29,7 @@
         android:layout_marginTop="40dp"
         android:elevation="10dp"
         android:transitionName="tvLogin"
-        android:text="Create Your Account"
+        android:text="Project Submission"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -62,7 +70,7 @@
                 android:id="@+id/cv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="#d9b255a1"
+                app:cardBackgroundColor="#D90B0A0B"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="4dp">
 
@@ -89,25 +97,27 @@
                         <EditText
                             android:id="@+id/edit_firstname"
                             android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="44dp"
                             android:layout_weight="1"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp"
                             android:hint="First Name"
-                            android:textColor="@color/white"
-                            android:textColorHint="@color/colorDarkGery"
+                            android:textColor="@color/dark_gray"
+                            android:background="@color/white"
+                            android:textColorHint="@color/dark_gray"
                             android:inputType="textEmailAddress" />
 
                         <EditText
                             android:id="@+id/edit_lastname"
                             android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="44dp"
                             android:layout_weight="1"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp"
                             android:hint="Last Name"
-                            android:textColor="@color/white"
-                            android:textColorHint="@color/colorDarkGery"
+                            android:textColor="@color/dark_gray"
+                            android:background="@color/white"
+                            android:textColorHint="@color/dark_gray"
                             android:inputType="textEmailAddress" />
                     </LinearLayout>
 
@@ -123,12 +133,13 @@
                     <EditText
                         android:id="@+id/edit_email"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="43dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:hint="Email Address"
-                        android:textColor="@color/white"
-                        android:textColorHint="@color/colorDarkGery"
+                        android:textColor="@color/dark_gray"
+                        android:background="@color/white"
+                        android:textColorHint="@color/dark_gray"
                         android:inputType="text" />
 
                     <TextView
@@ -143,12 +154,13 @@
                     <EditText
                         android:id="@+id/github_project_link"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="43dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:hint="Project on GITHUB (link)"
-                        android:textColor="@color/white"
-                        android:textColorHint="@color/colorDarkGery"
+                        android:textColor="@color/dark_gray"
+                        android:background="@color/white"
+                        android:textColorHint="@color/dark_gray"
                         android:inputType="text" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

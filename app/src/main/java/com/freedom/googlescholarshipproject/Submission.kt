@@ -8,10 +8,7 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import retrofit2.Call
 import retrofit2.Callback
@@ -44,6 +41,9 @@ class Submission : AppCompatActivity() {
         btnSubmit = findViewById(R.id.btn_submit)
 
         btnSubmit!!.setOnClickListener { ShowConfirmPopup() }
+
+        val btnBack = findViewById<ImageButton>(R.id.toolbar_back)
+        btnBack!!.setOnClickListener { finish() }
     }
 
     private fun makePostRequest() {
